@@ -1,0 +1,907 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2B304C9B184F7DAA005B03CC /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2B304C9E184F7DAA005B03CC /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				2B304CA1184F7DCC005B03CC /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+		2B8D4FD2184C3B5100D75F66 /* Tests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2B8D4FD3184C3B5100D75F66 /* Build configuration list for PBXAggregateTarget "Tests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2B8D4FD7184C3B5900D75F66 /* PBXTargetDependency */,
+				2B8D4FD9184C3B5900D75F66 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+		};
+		2B8D4FDA184C3B6400D75F66 /* Libs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2B8D4FDB184C3B6400D75F66 /* Build configuration list for PBXAggregateTarget "Libs" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2B8D4FDF184C3B6C00D75F66 /* PBXTargetDependency */,
+				2B8D4FE1184C3B6C00D75F66 /* PBXTargetDependency */,
+			);
+			name = Libs;
+			productName = Libs;
+		};
+		2B8D4FE2184C3B7100D75F66 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2B8D4FE3184C3B7100D75F66 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2B304CA0184F7DB9005B03CC /* PBXTargetDependency */,
+				2B8D4FE7184C3B7800D75F66 /* PBXTargetDependency */,
+				2B8D4FE9184C3B7800D75F66 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2B009B73184C358A001B5AD6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B009B72184C358A001B5AD6 /* XCTest.framework */; };
+		2B009B74184C358A001B5AD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD40220184C16D3001932BC /* Foundation.framework */; };
+		2B4EAD28184C313200EB6F19 /* PCGraph.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA60630184C2AF5002EE155 /* PCGraph.h */; };
+		2B4EAD29184C313200EB6F19 /* PCGDirectedGraph.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA6062B184C2AF5002EE155 /* PCGDirectedGraph.h */; };
+		2B4EAD2A184C313200EB6F19 /* PCGPath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA6062C184C2AF5002EE155 /* PCGPath.h */; };
+		2B4EAD2B184C313200EB6F19 /* PCGPathFinder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA6062D184C2AF5002EE155 /* PCGPathFinder.h */; };
+		2B4EAD2C184C313200EB6F19 /* PCGPathFinderDijkstra.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA6062E184C2AF5002EE155 /* PCGPathFinderDijkstra.h */; };
+		2B4EAD56184C325500EB6F19 /* PCGDirectedGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EAD1F184C2B8900EB6F19 /* PCGDirectedGraph.m */; };
+		2B4EAD57184C325500EB6F19 /* PCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EAD22184C2E6100EB6F19 /* PCGPath.m */; };
+		2B4EAD58184C325500EB6F19 /* PCGPathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EAD24184C2EE400EB6F19 /* PCGPathFinder.m */; };
+		2B4EAD59184C325500EB6F19 /* PCGPathFinderDijkstra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EAD26184C300A00EB6F19 /* PCGPathFinderDijkstra.m */; };
+		2B7B043A184C338300EF0558 /* PCGDirectedGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EAD1F184C2B8900EB6F19 /* PCGDirectedGraph.m */; };
+		2B7B043B184C338300EF0558 /* PCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EAD22184C2E6100EB6F19 /* PCGPath.m */; };
+		2B7B043C184C338300EF0558 /* PCGPathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EAD24184C2EE400EB6F19 /* PCGPathFinder.m */; };
+		2B7B043D184C338300EF0558 /* PCGPathFinderDijkstra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EAD26184C300A00EB6F19 /* PCGPathFinderDijkstra.m */; };
+		2B7B043F184C339800EF0558 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7B043E184C339800EF0558 /* Cocoa.framework */; };
+		2B7B0441184C340700EF0558 /* PCGraph.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA60630184C2AF5002EE155 /* PCGraph.h */; };
+		2B7B0442184C340700EF0558 /* PCGDirectedGraph.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA6062B184C2AF5002EE155 /* PCGDirectedGraph.h */; };
+		2B7B0443184C340700EF0558 /* PCGPath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA6062C184C2AF5002EE155 /* PCGPath.h */; };
+		2B7B0444184C340700EF0558 /* PCGPathFinder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA6062D184C2AF5002EE155 /* PCGPathFinder.h */; };
+		2B7B0445184C340700EF0558 /* PCGPathFinderDijkstra.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA6062E184C2AF5002EE155 /* PCGPathFinderDijkstra.h */; };
+		2B8D4FBB184C369000D75F66 /* PCGraph_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D4FB9184C369000D75F66 /* PCGraph_Tests.m */; };
+		2B8D4FC1184C3A7900D75F66 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B009B72184C358A001B5AD6 /* XCTest.framework */; };
+		2B8D4FD0184C3ADC00D75F66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7B043E184C339800EF0558 /* Cocoa.framework */; };
+		2B8D4FD1184C3B2700D75F66 /* PCGraph_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D4FB9184C369000D75F66 /* PCGraph_Tests.m */; };
+		2B8D4FEB184C3D6500D75F66 /* libPCGraph-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B009B6B184C34AE001B5AD6 /* libPCGraph-iOS.a */; };
+		2B8D4FEC184C3D6B00D75F66 /* libPCGraph.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B009B6C184C34AE001B5AD6 /* libPCGraph.a */; };
+		2BCC7FC9184EDED8005D1382 /* PCGraph_Wikipedia_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC7FC8184EDED8005D1382 /* PCGraph_Wikipedia_Tests.m */; };
+		2BCC7FCA184EDED8005D1382 /* PCGraph_Wikipedia_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC7FC8184EDED8005D1382 /* PCGraph_Wikipedia_Tests.m */; };
+		2BD40221184C16D3001932BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD40220184C16D3001932BC /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B009B80184C358A001B5AD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BD4021C184C16D3001932BC;
+			remoteInfo = "PCGraph-iOS";
+		};
+		2B304C9F184F7DB9005B03CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B304C9B184F7DAA005B03CC;
+			remoteInfo = Documentation;
+		};
+		2B8D4FCB184C3A7900D75F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4EAD30184C318200EB6F19;
+			remoteInfo = PCGraph;
+		};
+		2B8D4FD6184C3B5900D75F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B009B70184C358A001B5AD6;
+			remoteInfo = "PCGraph-iOS Tests";
+		};
+		2B8D4FD8184C3B5900D75F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B8D4FBF184C3A7900D75F66;
+			remoteInfo = "PCGraph Tests";
+		};
+		2B8D4FDE184C3B6C00D75F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BD4021C184C16D3001932BC;
+			remoteInfo = "PCGraph-iOS";
+		};
+		2B8D4FE0184C3B6C00D75F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4EAD30184C318200EB6F19;
+			remoteInfo = PCGraph;
+		};
+		2B8D4FE6184C3B7800D75F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B8D4FD2184C3B5100D75F66;
+			remoteInfo = Tests;
+		};
+		2B8D4FE8184C3B7800D75F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD40215184C16D3001932BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B8D4FDA184C3B6400D75F66;
+			remoteInfo = Libs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B7B0440184C33EA00EF0558 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/PCGraph;
+			dstSubfolderSpec = 16;
+			files = (
+				2B7B0441184C340700EF0558 /* PCGraph.h in CopyFiles */,
+				2B7B0442184C340700EF0558 /* PCGDirectedGraph.h in CopyFiles */,
+				2B7B0443184C340700EF0558 /* PCGPath.h in CopyFiles */,
+				2B7B0444184C340700EF0558 /* PCGPathFinder.h in CopyFiles */,
+				2B7B0445184C340700EF0558 /* PCGPathFinderDijkstra.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD4021B184C16D3001932BC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/PCGraph;
+			dstSubfolderSpec = 16;
+			files = (
+				2B4EAD28184C313200EB6F19 /* PCGraph.h in CopyFiles */,
+				2B4EAD29184C313200EB6F19 /* PCGDirectedGraph.h in CopyFiles */,
+				2B4EAD2A184C313200EB6F19 /* PCGPath.h in CopyFiles */,
+				2B4EAD2B184C313200EB6F19 /* PCGPathFinder.h in CopyFiles */,
+				2B4EAD2C184C313200EB6F19 /* PCGPathFinderDijkstra.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2B009B6B184C34AE001B5AD6 /* libPCGraph-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPCGraph-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B009B6C184C34AE001B5AD6 /* libPCGraph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPCGraph.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B009B71184C358A001B5AD6 /* PCGraph-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PCGraph-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B009B72184C358A001B5AD6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2B4EAD1F184C2B8900EB6F19 /* PCGDirectedGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGDirectedGraph.m; path = src/PCGDirectedGraph.m; sourceTree = "<group>"; };
+		2B4EAD21184C2CE700EB6F19 /* PCGDirectedGraph+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PCGDirectedGraph+Private.h"; path = "src/PCGDirectedGraph+Private.h"; sourceTree = "<group>"; };
+		2B4EAD22184C2E6100EB6F19 /* PCGPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGPath.m; path = src/PCGPath.m; sourceTree = "<group>"; };
+		2B4EAD24184C2EE400EB6F19 /* PCGPathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGPathFinder.m; path = src/PCGPathFinder.m; sourceTree = "<group>"; };
+		2B4EAD26184C300A00EB6F19 /* PCGPathFinderDijkstra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGPathFinderDijkstra.m; path = src/PCGPathFinderDijkstra.m; sourceTree = "<group>"; };
+		2B7B043E184C339800EF0558 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2B8D4FB7184C369000D75F66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = test/Info.plist; sourceTree = "<group>"; };
+		2B8D4FB8184C369000D75F66 /* PCGraph Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PCGraph Tests-Prefix.pch"; path = "test/PCGraph Tests-Prefix.pch"; sourceTree = "<group>"; };
+		2B8D4FB9184C369000D75F66 /* PCGraph_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGraph_Tests.m; path = test/PCGraph_Tests.m; sourceTree = "<group>"; };
+		2B8D4FC0184C3A7900D75F66 /* PCGraph Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PCGraph Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA6062B184C2AF5002EE155 /* PCGDirectedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGDirectedGraph.h; path = src/PCGDirectedGraph.h; sourceTree = "<group>"; };
+		2BA6062C184C2AF5002EE155 /* PCGPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGPath.h; path = src/PCGPath.h; sourceTree = "<group>"; };
+		2BA6062D184C2AF5002EE155 /* PCGPathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGPathFinder.h; path = src/PCGPathFinder.h; sourceTree = "<group>"; };
+		2BA6062E184C2AF5002EE155 /* PCGPathFinderDijkstra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGPathFinderDijkstra.h; path = src/PCGPathFinderDijkstra.h; sourceTree = "<group>"; };
+		2BA6062F184C2AF5002EE155 /* PCGraph-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PCGraph-Prefix.pch"; path = "src/PCGraph-Prefix.pch"; sourceTree = "<group>"; };
+		2BA60630184C2AF5002EE155 /* PCGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGraph.h; path = src/PCGraph.h; sourceTree = "<group>"; };
+		2BCC7FC8184EDED8005D1382 /* PCGraph_Wikipedia_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGraph_Wikipedia_Tests.m; path = test/PCGraph_Wikipedia_Tests.m; sourceTree = "<group>"; };
+		2BD40220184C16D3001932BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B009B6E184C358A001B5AD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8D4FEB184C3D6500D75F66 /* libPCGraph-iOS.a in Frameworks */,
+				2B009B73184C358A001B5AD6 /* XCTest.framework in Frameworks */,
+				2B009B74184C358A001B5AD6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4EAD2E184C318200EB6F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B7B043F184C339800EF0558 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8D4FBD184C3A7900D75F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8D4FEC184C3D6B00D75F66 /* libPCGraph.a in Frameworks */,
+				2B8D4FD0184C3ADC00D75F66 /* Cocoa.framework in Frameworks */,
+				2B8D4FC1184C3A7900D75F66 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD4021A184C16D3001932BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD40221184C16D3001932BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B8D4FB6184C366800D75F66 /* PCGraph Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2B8D4FB7184C369000D75F66 /* Info.plist */,
+				2B8D4FB8184C369000D75F66 /* PCGraph Tests-Prefix.pch */,
+				2B8D4FB9184C369000D75F66 /* PCGraph_Tests.m */,
+				2BCC7FC8184EDED8005D1382 /* PCGraph_Wikipedia_Tests.m */,
+			);
+			name = "PCGraph Tests";
+			sourceTree = "<group>";
+		};
+		2B8D4FEA184C3BB600D75F66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B009B6B184C34AE001B5AD6 /* libPCGraph-iOS.a */,
+				2B009B6C184C34AE001B5AD6 /* libPCGraph.a */,
+				2B009B71184C358A001B5AD6 /* PCGraph-iOS Tests.xctest */,
+				2B8D4FC0184C3A7900D75F66 /* PCGraph Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BD40214184C16D3001932BC = {
+			isa = PBXGroup;
+			children = (
+				2BD40246184C1F03001932BC /* PCGraph */,
+				2B8D4FB6184C366800D75F66 /* PCGraph Tests */,
+				2BD4021F184C16D3001932BC /* Frameworks */,
+				2B8D4FEA184C3BB600D75F66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BD4021F184C16D3001932BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B043E184C339800EF0558 /* Cocoa.framework */,
+				2BD40220184C16D3001932BC /* Foundation.framework */,
+				2B009B72184C358A001B5AD6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BD40246184C1F03001932BC /* PCGraph */ = {
+			isa = PBXGroup;
+			children = (
+				2BA60630184C2AF5002EE155 /* PCGraph.h */,
+				2BA6062B184C2AF5002EE155 /* PCGDirectedGraph.h */,
+				2B4EAD21184C2CE700EB6F19 /* PCGDirectedGraph+Private.h */,
+				2B4EAD1F184C2B8900EB6F19 /* PCGDirectedGraph.m */,
+				2BA6062C184C2AF5002EE155 /* PCGPath.h */,
+				2B4EAD22184C2E6100EB6F19 /* PCGPath.m */,
+				2BA6062D184C2AF5002EE155 /* PCGPathFinder.h */,
+				2B4EAD24184C2EE400EB6F19 /* PCGPathFinder.m */,
+				2BA6062E184C2AF5002EE155 /* PCGPathFinderDijkstra.h */,
+				2B4EAD26184C300A00EB6F19 /* PCGPathFinderDijkstra.m */,
+				2BA6062F184C2AF5002EE155 /* PCGraph-Prefix.pch */,
+			);
+			name = PCGraph;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B009B70184C358A001B5AD6 /* PCGraph-iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B009B84184C358A001B5AD6 /* Build configuration list for PBXNativeTarget "PCGraph-iOS Tests" */;
+			buildPhases = (
+				2B009B6D184C358A001B5AD6 /* Sources */,
+				2B009B6E184C358A001B5AD6 /* Frameworks */,
+				2B009B6F184C358A001B5AD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B009B81184C358A001B5AD6 /* PBXTargetDependency */,
+			);
+			name = "PCGraph-iOS Tests";
+			productName = "PCGraph-iOS Tests";
+			productReference = 2B009B71184C358A001B5AD6 /* PCGraph-iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B4EAD30184C318200EB6F19 /* PCGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4EAD50184C318300EB6F19 /* Build configuration list for PBXNativeTarget "PCGraph" */;
+			buildPhases = (
+				2B4EAD2D184C318200EB6F19 /* Sources */,
+				2B4EAD2E184C318200EB6F19 /* Frameworks */,
+				2B7B0440184C33EA00EF0558 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PCGraph;
+			productName = PCGraph;
+			productReference = 2B009B6C184C34AE001B5AD6 /* libPCGraph.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2B8D4FBF184C3A7900D75F66 /* PCGraph Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8D4FCD184C3A7900D75F66 /* Build configuration list for PBXNativeTarget "PCGraph Tests" */;
+			buildPhases = (
+				2B8D4FBC184C3A7900D75F66 /* Sources */,
+				2B8D4FBD184C3A7900D75F66 /* Frameworks */,
+				2B8D4FBE184C3A7900D75F66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B8D4FCC184C3A7900D75F66 /* PBXTargetDependency */,
+			);
+			name = "PCGraph Tests";
+			productName = "PCGraph Tests";
+			productReference = 2B8D4FC0184C3A7900D75F66 /* PCGraph Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BD4021C184C16D3001932BC /* PCGraph-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BD40240184C16D4001932BC /* Build configuration list for PBXNativeTarget "PCGraph-iOS" */;
+			buildPhases = (
+				2BD40219184C16D3001932BC /* Sources */,
+				2BD4021A184C16D3001932BC /* Frameworks */,
+				2BD4021B184C16D3001932BC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PCGraph-iOS";
+			productName = PCGraph;
+			productReference = 2B009B6B184C34AE001B5AD6 /* libPCGraph-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BD40215184C16D3001932BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = PjEr.ca;
+				TargetAttributes = {
+					2B009B70184C358A001B5AD6 = {
+						TestTargetID = 2BD4021C184C16D3001932BC;
+					};
+					2B8D4FBF184C3A7900D75F66 = {
+						TestTargetID = 2B4EAD30184C318200EB6F19;
+					};
+				};
+			};
+			buildConfigurationList = 2BD40218184C16D3001932BC /* Build configuration list for PBXProject "PCGraph" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2BD40214184C16D3001932BC;
+			productRefGroup = 2BD40214184C16D3001932BC;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BD4021C184C16D3001932BC /* PCGraph-iOS */,
+				2B009B70184C358A001B5AD6 /* PCGraph-iOS Tests */,
+				2B4EAD30184C318200EB6F19 /* PCGraph */,
+				2B8D4FBF184C3A7900D75F66 /* PCGraph Tests */,
+				2B8D4FD2184C3B5100D75F66 /* Tests */,
+				2B8D4FDA184C3B6400D75F66 /* Libs */,
+				2B304C9B184F7DAA005B03CC /* Documentation */,
+				2B8D4FE2184C3B7100D75F66 /* All */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B009B6F184C358A001B5AD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8D4FBE184C3A7900D75F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B304CA1184F7DCC005B03CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"PjEr.ca\";\ncompanyID=\"ca.pjer\";\ncompanyURL=\"http://PjEr.ca\";\n#target=\"iphoneos\";\ntarget=\"macosx\";\noutputPath=\"help\";\n# End constants\n~/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--index-desc \"README.md\" \\\n--create-html \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B009B6D184C358A001B5AD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8D4FBB184C369000D75F66 /* PCGraph_Tests.m in Sources */,
+				2BCC7FC9184EDED8005D1382 /* PCGraph_Wikipedia_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4EAD2D184C318200EB6F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4EAD56184C325500EB6F19 /* PCGDirectedGraph.m in Sources */,
+				2B4EAD57184C325500EB6F19 /* PCGPath.m in Sources */,
+				2B4EAD58184C325500EB6F19 /* PCGPathFinder.m in Sources */,
+				2B4EAD59184C325500EB6F19 /* PCGPathFinderDijkstra.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8D4FBC184C3A7900D75F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8D4FD1184C3B2700D75F66 /* PCGraph_Tests.m in Sources */,
+				2BCC7FCA184EDED8005D1382 /* PCGraph_Wikipedia_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD40219184C16D3001932BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B7B043A184C338300EF0558 /* PCGDirectedGraph.m in Sources */,
+				2B7B043B184C338300EF0558 /* PCGPath.m in Sources */,
+				2B7B043C184C338300EF0558 /* PCGPathFinder.m in Sources */,
+				2B7B043D184C338300EF0558 /* PCGPathFinderDijkstra.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B009B81184C358A001B5AD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BD4021C184C16D3001932BC /* PCGraph-iOS */;
+			targetProxy = 2B009B80184C358A001B5AD6 /* PBXContainerItemProxy */;
+		};
+		2B304CA0184F7DB9005B03CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B304C9B184F7DAA005B03CC /* Documentation */;
+			targetProxy = 2B304C9F184F7DB9005B03CC /* PBXContainerItemProxy */;
+		};
+		2B8D4FCC184C3A7900D75F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B4EAD30184C318200EB6F19 /* PCGraph */;
+			targetProxy = 2B8D4FCB184C3A7900D75F66 /* PBXContainerItemProxy */;
+		};
+		2B8D4FD7184C3B5900D75F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B009B70184C358A001B5AD6 /* PCGraph-iOS Tests */;
+			targetProxy = 2B8D4FD6184C3B5900D75F66 /* PBXContainerItemProxy */;
+		};
+		2B8D4FD9184C3B5900D75F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B8D4FBF184C3A7900D75F66 /* PCGraph Tests */;
+			targetProxy = 2B8D4FD8184C3B5900D75F66 /* PBXContainerItemProxy */;
+		};
+		2B8D4FDF184C3B6C00D75F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BD4021C184C16D3001932BC /* PCGraph-iOS */;
+			targetProxy = 2B8D4FDE184C3B6C00D75F66 /* PBXContainerItemProxy */;
+		};
+		2B8D4FE1184C3B6C00D75F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B4EAD30184C318200EB6F19 /* PCGraph */;
+			targetProxy = 2B8D4FE0184C3B6C00D75F66 /* PBXContainerItemProxy */;
+		};
+		2B8D4FE7184C3B7800D75F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B8D4FD2184C3B5100D75F66 /* Tests */;
+			targetProxy = 2B8D4FE6184C3B7800D75F66 /* PBXContainerItemProxy */;
+		};
+		2B8D4FE9184C3B7800D75F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B8D4FDA184C3B6400D75F66 /* Libs */;
+			targetProxy = 2B8D4FE8184C3B7800D75F66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B009B82184C358A001B5AD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test/PCGraph Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = test/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2B009B83184C358A001B5AD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test/PCGraph Tests-Prefix.pch";
+				INFOPLIST_FILE = test/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		2B304C9C184F7DAA005B03CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B304C9D184F7DAA005B03CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2B4EAD51184C318300EB6F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/PCGraph-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2B4EAD52184C318300EB6F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/PCGraph-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2B8D4FCE184C3A7900D75F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test/PCGraph Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = test/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2B8D4FCF184C3A7900D75F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test/PCGraph Tests-Prefix.pch";
+				INFOPLIST_FILE = test/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		2B8D4FD4184C3B5100D75F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B8D4FD5184C3B5100D75F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2B8D4FDC184C3B6400D75F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B8D4FDD184C3B6400D75F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2B8D4FE4184C3B7100D75F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B8D4FE5184C3B7100D75F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2BD4023E184C16D4001932BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BD4023F184C16D4001932BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BD40241184C16D4001932BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/PCGraph.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/PCGraph-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2BD40242184C16D4001932BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/PCGraph.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/PCGraph-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B009B84184C358A001B5AD6 /* Build configuration list for PBXNativeTarget "PCGraph-iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B009B82184C358A001B5AD6 /* Debug */,
+				2B009B83184C358A001B5AD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B304C9E184F7DAA005B03CC /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B304C9C184F7DAA005B03CC /* Debug */,
+				2B304C9D184F7DAA005B03CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B4EAD50184C318300EB6F19 /* Build configuration list for PBXNativeTarget "PCGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4EAD51184C318300EB6F19 /* Debug */,
+				2B4EAD52184C318300EB6F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8D4FCD184C3A7900D75F66 /* Build configuration list for PBXNativeTarget "PCGraph Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8D4FCE184C3A7900D75F66 /* Debug */,
+				2B8D4FCF184C3A7900D75F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8D4FD3184C3B5100D75F66 /* Build configuration list for PBXAggregateTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8D4FD4184C3B5100D75F66 /* Debug */,
+				2B8D4FD5184C3B5100D75F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8D4FDB184C3B6400D75F66 /* Build configuration list for PBXAggregateTarget "Libs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8D4FDC184C3B6400D75F66 /* Debug */,
+				2B8D4FDD184C3B6400D75F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8D4FE3184C3B7100D75F66 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8D4FE4184C3B7100D75F66 /* Debug */,
+				2B8D4FE5184C3B7100D75F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BD40218184C16D3001932BC /* Build configuration list for PBXProject "PCGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD4023E184C16D4001932BC /* Debug */,
+				2BD4023F184C16D4001932BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BD40240184C16D4001932BC /* Build configuration list for PBXNativeTarget "PCGraph-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD40241184C16D4001932BC /* Debug */,
+				2BD40242184C16D4001932BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BD40215184C16D3001932BC /* Project object */;
+}

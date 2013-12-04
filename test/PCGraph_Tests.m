@@ -117,6 +117,18 @@
     [self assert_shouldNotFindPathFromVertex:@5 toVertex:@1];
 }
 
+- (void)testFindPathToNotConnectedVertex
+{
+    [self.graph addVertex:@5];
+    [self assert_shouldNotFindPathFromVertex:@1 toVertex:@5];
+}
+
+- (void)testFindPathFromNotConnectedVertex
+{
+    [self.graph addVertex:@5];
+    [self assert_shouldNotFindPathFromVertex:@5 toVertex:@1];
+}
+
 - (void)testFindPathToTerminalVertex
 {
     [self.graph addEdgeFromVertex:@4 toVertex:@5];

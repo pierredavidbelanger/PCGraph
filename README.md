@@ -3,6 +3,13 @@ PCGraph
 
 Objective-C implementation of a weighted directed graph and Dijkstra's algorithm for shortest path finding.
 
+Get Started
+===========
+
+- [Browse PCGraph source code](https://github.com/pierredavidbelanger/PCGraph) on GitHub
+- [Download PCGraph](https://github.com/pierredavidbelanger/PCGraph/archive/master.zip) and have a look at the testcases
+- Check the complete public API [documentation](http://pcgraph.pjer.ca/)
+
 Usage
 =====
 

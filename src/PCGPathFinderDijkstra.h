@@ -30,4 +30,4 @@
  */
 @interface PCGPathFinderDijkstra : PCGPathFinder
 
-@endDijkstra's algorithm
+@end

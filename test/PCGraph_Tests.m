@@ -76,6 +76,15 @@
     XCTAssertFalse(path.vertices.count, @"should not had found a path from %@ to %@", source, target);
 }
 
+- (void)test_removeVertex
+{
+    [self.graph removeVertex:@3];
+    [self assert_shouldNotFindPathFromVertex:@2 toVertex:@3];
+    [self assert_shouldNotFindPathFromVertex:@2 toVertex:@4];
+    [self assert_shouldFindPathFromVertex:@1 toVertex:@2];
+    [self assert_shouldFindPathFromVertex:@4 toVertex:@1];
+}
+
 - (void)test_removeEdgesBetweenVertex_andVertex
 {
     [self.graph removeEdgesBetweenVertex:@2 andVertex:@3];
